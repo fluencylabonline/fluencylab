@@ -1,0 +1,22 @@
+@import url('https://fonts.cdnfonts.com/css/leonardo-rounded');
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url(//db.onlinewebfonts.com/c/1a8d4ff3cf8a0fceded5a7d806c9726e?family=Kaleko105RoundW01-Bold);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body{ 
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/images/inglesum.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
