@@ -420,10 +420,9 @@ body{
   padding: 5%;
 }
 
-.sobretexto span{
-    display: flex;
-    flex-direction: column;
-    width: 800px;
+.sobretxt{
+  flex-direction: column;
+  gap: 25px;
 }
 
 @media screen and (max-width: 720px){
@@ -432,6 +431,7 @@ body{
     width: 450px;
     height: fit-content;
   }
+
   }
 
   /*SPOTIFY*/
