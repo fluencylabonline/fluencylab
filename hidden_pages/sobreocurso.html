@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Curso</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+html{
+    scroll-behavior: smooth;
+  }
+
+/*BUTTON*/
+.button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media only screen and (max-width: 600px){
+    .button {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  
+  .button-icon {
+    margin: 10px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  
+  .button-icon.show {
+    opacity: 1;
+  }
+  
+  .button-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(3rem, 4vw, 6rem);
+    height: clamp(3rem, 4vw, 6rem);
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .button-toggle:hover{
+    background-color: #ff4133; 
+    transform: 4;
+  }
+  
+  .button-icon img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease;
+  }
+  
+  .button-icon img:hover{
+    width: 50px;
+    height: 50px;
+    transform: 4;
+  }
+  
+  
+  .button-toggle img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{ 
+    height: 100vh;
+    width: 100%;
+    background-image: url("/hidden_pages/hidden_images/hidden-img\ \(1\).jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Leonardo-Rounded', sans-serif;
+}
+
+.sobreaqui{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tema{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tema h1{
+    font-size: clamp(2rem, 6vw, 10vh);
+    color: white;
+    transition: .5s ease-in-out;
+    text-align: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 40vh;
+    padding: 15%;
+    width: 100%;
+}
+
+.info h4{
+    font-size: 1.5em;
+}
+
+.info span{
+    width: 80%;
+}
+
+.infosub{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    padding: 5%;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: fit-content;
+    padding: 15%;
+    width: 100%;
+}
+
+
+.infosub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+}
+
+</style>
+
+<div class="button">
+    <div class="button-container">
+        <div class="button-icon">
+            <a href="/hidden_pages/contratopdf.pdf" 
+            target="popup" 
+            onclick="window.open('/hidden_pages/contratopdf.pdf','popup','width=600,height=600'); return false;">
+            <img src="/assets/icons/contract.png" alt="Contrato"></a>
+          </div>
+      <div class="button-icon">
+        <a href="/index.html"><img src="/assets/icons/house.png" alt="Home"></a>
+      </div>
+      <div class="button-icon">
+        <a href="https://wa.me/5586999535791?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+os+cursos."><img src="/assets/icons/whatsapp.png" alt="WhatsApp"></a>
+      </div>
+      <div class="button-icon">
+        <a href="https://www.instagram.com/fluency.lab/"><img src="/assets/icons/instagram.png" alt="Instagram"></a>
+      </div>
+      <div class="button-icon">
+        <a href="#"><img src="/assets/icons/up-arrow.png" alt="Back to top"></a>
+      </div>
+    </div>
+    <div class="button-toggle">
+      <img src="/assets/icons/up-arrow.png" alt="Toggle options">
+    </div>
+  </div>
+
+<body>
+    
+        <section class="sobreaqui">
+
+            <div class="tema">
+                <h1>Como é estudar na <p> Fluency Lab?</h1>
+            </div>
+
+            <div class="info" style="background-image: url(/hidden_pages/hidden_images/hidden-img\ \(6\).jpg); background-position: top; background-repeat: no-repeat; background-size: cover;">
+                <div class="infosub">
+                    <div class="text" style="color:white;">
+                        <h4>No seu ritmo!</h4>
+                        <span>Não precisa se preocupar com aprender rápido, com muito conteúdo ou com assuntos difíceis. Vamos te ensinar no seu ritmo, um ensino só para você.</span>
+                    </div>
+                    <div class="video">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/_87izu4O134" title="CORTE DE AULA 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info left" style="background-image: url(/hidden_pages/hidden_images/hidden-img\ \(9\).jpg); background-position: top; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+                <div class="infosub">
+                    <div class="text" style="color:white;">
+                        <h4>Para todas as idade</h4>
+                        <span>Quando fazemos aula de idioma ficamos preocupados de sermos jovens ou velhos demais para aprender. Aqui você tem aulas que acompanham não só seu nível, mas sua idade também!</span>
+                    </div>
+                    <div class="video">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/_87izu4O134" title="CORTE DE AULA 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info" style="background-image: url(/hidden_pages/hidden_images/hidden-img\ \(4\).jpg); background-position: top; background-repeat: no-repeat; background-size: cover;">
+                <div class="infosub" style="color:white;">
+                    <div class="text">
+                        <h4>Onde você conversa</h4>
+                        <span>Nas aulas vamos tentar ao máximo colocar em prática tudo o que você já sabe e está aprendendo!</span>     
+                    </div>
+                    <div class="video">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/_87izu4O134" title="CORTE DE AULA 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info left" style="background-image: url(/hidden_pages/hidden_images/hidden-img\ \(11\).jpg); background-position: top; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+                <div class="infosub" style="color:white;">
+                    <div class="text">
+                        <h4>Pratica o que precisa</h4>
+                        <span>Nossos alunos estudam principalmente o que interessa eles, o que deixa as aulas mais interessantes. </span>
+                    </div>
+                    <div class="video">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/_87izu4O134" title="CORTE DE AULA 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info" style="background-image: url(/hidden_pages/hidden_images/hidden-img\ \(10\).jpg); background-position: top; background-repeat: no-repeat; background-size: cover;">
+                <div class="infosub">
+                    <div class="text">
+                        <h4>E ainda ri um pouco.</h4>
+                        <span>E claro, não estamos dando uma palestra. Estamos, junto com você, aprendendo uma nova forma de pensar e ver o mundo. Por isso, precisamos rir bastante. </span>
+                    </div>
+                    <div class="video">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/_87izu4O134" title="CORTE DE AULA 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+</body>
+
+<script>
+    const button = document.querySelector('.button');
+    const icons = document.querySelectorAll('.button-icon');
+    const toggle = document.querySelector('.button-toggle');
+
+    toggle.addEventListener('click', () => {
+    button.classList.toggle('open');
+    icons.forEach(icon => icon.classList.toggle('show'));
+    });
+</script>
+
+</html>

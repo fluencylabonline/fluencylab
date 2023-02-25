@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz_topics_style.css">
+    <title>English Quiz</title>
+</head>
+<body>
+
+  <style>
+    body{
+    background-image: url(/assets/backgrounds/quizbackground_espanhol.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+  </style>
+
+<div class="button">
+  <div class="button-container">
+    <div class="button-icon">
+      <a href="/index.html"><img src="/assets/icons/house.png" alt="Home"></a>
+    </div>
+    <div class="button-icon">
+      <a href="https://wa.me/5586999535791?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+os+cursos."><img src="/assets/icons/whatsapp.png" alt="WhatsApp"></a>
+    </div>
+    <div class="button-icon">
+      <a href="https://www.instagram.com/fluency.lab/"><img src="/assets/icons/instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="button-icon">
+      <a href="/assets/language_espanhol.html"><img src="/assets/icons/up-arrow.png" alt="Back to top"></a>
+    </div>
+  </div>
+  <div class="button-toggle giro">
+    <img src="/assets/icons/up-arrow.png" alt="Toggle options">
+  </div>
+</div>
+
+    <section class="title">
+        <h1>Vamos praticar um pouco?</h1>
+    </section>
+    
+    <section class="topicos">
+        <a href="/assets/quiz/espanhol/topics/substantivos/quiz_espanhol_substantivos.html">
+            <div class="topico um">
+                <h4>Substantivos</h4>
+            </div>
+            </a>
+
+            <a href="/assets/quiz/espanhol/topics/adjetivos/quiz_espanhol_adjetivos.html">
+                <div class="topico dois">
+                    <h4>Adjetivos</h4>
+                </div>
+                </a>
+
+            <a href="/assets/quiz/espanhol/topics/grammar/quiz_espanhol_grammar.html">
+            <div class="topico cinco">
+                <h4>Gramática</h4>
+            </div>
+            </a>
+    </section>
+
+</body>
+
+    <script>
+        const button = document.querySelector('.button');
+        const icons = document.querySelectorAll('.button-icon');
+        const toggle = document.querySelector('.button-toggle');
+
+        toggle.addEventListener('click', () => {
+        button.classList.toggle('open');
+        icons.forEach(icon => icon.classList.toggle('show'));
+        });
+    </script>
+
+</html>
