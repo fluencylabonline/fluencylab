@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+
+  <script src="/../../login/loading.js"></script>
+  <script src="../../firebase-init.js"></script>
+  <script src="../../auth-guard.js"></script>
+  <script src="home.js"></script>
+  <title>Home</title>
+</head>
+<body>
+  <div class="side_menu_page">
+    <section class="side_menu">
+
+      <div class="side_menu_buttons">
+        <button>Home</button>
+        <button>Notas</button>
+        <button>Calendário</button>
+        <button>Pagamentos</button>
+        <button onclick="logout()">Sair</button>
+      </div>
+
+    </section>
+
+    <section class="side_page">
+
+      <textarea class="notas" id="notas"></textarea>
+    
+    </section>
+
+  </div>
+</body>
+</html>

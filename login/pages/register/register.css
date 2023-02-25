@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: 'Leonardo-Rounded', sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(226, 226, 226);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    border-radius: 20px;
+    box-shadow: 0 8px 48px 2px hsla(10 6% 15% / .4);
+    width: clamp(15rem, 28vw, 45rem);
+    height: clamp(25rem, 35vw, 50rem);
+    padding: 3%;
+    gap: 2.5em;
+}
+
+input{
+    border: none;
+}
+
+button{
+    margin-bottom: 10px;
+}

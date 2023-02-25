@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+/*BUTTON*/
+.button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media only screen and (max-width: 600px){
+    .button {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  
+  .button-icon {
+    margin: 10px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  
+  .button-icon.show {
+    opacity: 1;
+  }
+  
+  .button-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(3rem, 4vw, 6rem);
+    height: clamp(3rem, 4vw, 6rem);
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .button-toggle:hover{
+    background-color: #ff4133; 
+    transform: 4;
+  }
+  
+  .button-icon img {
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+  }
+  
+  .button-icon img:hover{
+    width: 55px;
+    height: 55px;
+    transform: 4;
+  }
+  
+  
+  .button-toggle img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+  }
+  
+  /*HTML E BODY*/
+  html{
+      scroll-behavior: smooth;
+    }
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Leonardo-Rounded', sans-serif;
+    background-image: url(/assets/backgrounds/main_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Leonardo-Rounded', sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(36, 35, 35);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    border-radius: 20px;
+    box-shadow: 0 8px 48px 2px hsla(10 6% 15% / .4);
+    width: clamp(15rem, 28vw, 45rem);
+    height: clamp(25rem, 35vw, 50rem);
+    padding: 3%;
+    gap: 2.5em;
+}
+
+form label{
+    color: white;
+}
+
+input {
+    border: none;
+}
+button {
+    margin-bottom: 10px;
+}
