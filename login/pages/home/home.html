@@ -1,40 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="home.css">
-  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
-
-  <script src="/../../login/loading.js"></script>
-  <script src="../../firebase-init.js"></script>
-  <script src="../../auth-guard.js"></script>
-  <script src="home.js"></script>
   <title>Home</title>
 </head>
+
 <body>
-  <div class="side_menu_page">
-    <section class="side_menu">
 
-      <div class="side_menu_buttons">
-        <button>Home</button>
-        <button>Notas</button>
-        <button>Calendário</button>
-        <button>Pagamentos</button>
-        <button onclick="logout()">Sair</button>
-      </div>
+  <section class="menulistac">
+    <nav class="menulista">
+      <a href="/index.html"><button>Home</button></a>
+      <button id="create-collection-button">Notes</button>
+      <button onclick="displayUserDocs()">FlashCards</button>
+      <button onclick="logout()">Sair</button>
+    </nav>
+  </section>
 
-    </section>
+  <section class="notetaker">
+    <div class="wp-webdeasy-comment-editor">
+      <div class="toolbar">
+        <div class="line">
+          <div class="box">
+            <span
+              class="editor-btn icon smaller"
+              data-action="bold"
+              data-tag-name="b"
+              title="Bold"
+            >
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/bold.png"
+              />
+            </span>
+            <span
+              class="editor-btn icon smaller"
+              data-action="italic"
+              data-tag-name="i"
+              title="Italic"
+            >
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/italic.png"
+              />
+            </span>
 
-    <section class="side_page">
+<!--underline went here-->
+<!--strike went here-->
 
-      <textarea class="notas" id="notas"></textarea>
-    
-    </section>
+          </div>
+          <div class="box">
+            <span class="editor-btn icon has-submenu">
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/align-left.png"
+              />
+              <div class="submenu">
+                <span
+                  class="editor-btn icon"
+                  data-action="justifyLeft"
+                  data-style="textAlign:left"
+                  title="Justify left"
+                >
+                  <img
+                    src="https://img.icons8.com/fluency-systems-filled/48/000000/align-left.png"
+                  />
+                </span>
+                <span
+                  class="editor-btn icon"
+                  data-action="justifyCenter"
+                  data-style="textAlign:center"
+                  title="Justify center"
+                >
+                  <img
+                    src="https://img.icons8.com/fluency-systems-filled/48/000000/align-center.png"
+                  />
+                </span>
+                <span
+                  class="editor-btn icon"
+                  data-action="justifyRight"
+                  data-style="textAlign:right"
+                  title="Justify right"
+                >
+                  <img
+                    src="https://img.icons8.com/fluency-systems-filled/48/000000/align-right.png"
+                  />
+                </span>
+                <span
+                  class="editor-btn icon"
+                  data-action="formatBlock"
+                  data-style="textAlign:justify"
+                  title="Justify block"
+                >
+                  <img
+                    src="https://img.icons8.com/fluency-systems-filled/48/000000/align-justify.png"
+                  />
+                </span>
+              </div>
+            </span>
+            <span
+              class="editor-btn icon"
+              data-action="insertOrderedList"
+              data-tag-name="ol"
+              title="Insert ordered list"
+            >
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/numbered-list.png"
+              />
+            </span>
+            <span
+              class="editor-btn icon"
+              data-action="insertUnorderedList"
+              data-tag-name="ul"
+              title="Insert unordered list"
+            >
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/bulleted-list.png"
+              />
+            </span>
 
-  </div>
+<!--outdent went here-->
+
+            <span class="editor-btn icon" data-action="indent" title="Indent">
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/indent.png"
+              />
+            </span>
+          </div>
+          <div class="box">
+            <span
+              class="editor-btn icon"
+              data-action="insertHorizontalRule"
+              title="Insert horizontal rule"
+            >
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/horizontal-line.png"
+              />
+            </span>
+          </div>
+          <div class="box">
+            <span class="editor-btn icon smaller" data-action="undo" title="Undo">
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/undo--v1.png"
+              />
+            </span>
+            <span
+              class="editor-btn icon"
+              data-action="removeFormat"
+              title="Remove format"
+            >
+              <img
+                src="https://img.icons8.com/fluency-systems-filled/48/000000/remove-format.png"
+              />
+            </span>
+          </div>
+        </div>
+      </div>  
+
+
+        <div class="content-area">
+          <div class="visuell-view" contenteditable></div>
+        </div>
+
+    </div> <!--fim da div aqui-->
+
+  </section>
+
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+
+<script src="/../../login/loading.js"></script>
+<script src="../../firebase-init.js"></script>
+<script src="../../auth-guard.js"></script>
+
+<script src="home.js"></script>
+
 </html>
